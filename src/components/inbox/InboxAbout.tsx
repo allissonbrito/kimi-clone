@@ -22,7 +22,7 @@ export function InboxAbout() {
 
         <div className="mt-8">
           <Button asChild variant="heroOutline" size="pill">
-            <a href="#contato">Vamos iniciar seu projeto?</a>
+            
           </Button>
         </div>
       </div>
