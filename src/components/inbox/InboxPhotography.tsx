@@ -1,17 +1,10 @@
 import photoImage from "@/assets/inbox-photo.jpg";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-
 export function InboxPhotography() {
-  return (
-    <div className="grid gap-6 md:grid-cols-2">
+  return <div className="grid gap-6 md:grid-cols-2">
       <Card className="overflow-hidden border-border/70 bg-card/50 shadow-soft">
-        <img
-          src={photoImage}
-          alt="Fotografia profissional para conteúdo de marca"
-          className="h-72 w-full object-cover md:h-full"
-          loading="lazy"
-        />
+        <img src={photoImage} alt="Fotografia profissional para conteúdo de marca" className="h-72 w-full object-cover md:h-full" loading="lazy" />
       </Card>
 
       <Card className="border-border/70 bg-card/60 p-6 shadow-soft backdrop-blur">
@@ -44,10 +37,9 @@ export function InboxPhotography() {
 
         <div className="mt-6">
           <Button asChild variant="hero" size="pill" className="w-full">
-            <a href="#contato">Agendar Ensaio</a>
+            
           </Button>
         </div>
       </Card>
-    </div>
-  );
+    </div>;
 }
