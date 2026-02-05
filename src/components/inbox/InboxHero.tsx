@@ -2,37 +2,20 @@ import heroImage from "@/assets/inbox-hero.jpg";
 import { Button } from "@/components/ui/button";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { useCallback } from "react";
-
 export function InboxHero() {
   const reducedMotion = useReducedMotion();
-
-  const onMove = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
-      if (reducedMotion) return;
-      const el = e.currentTarget;
-      const r = el.getBoundingClientRect();
-      const x = ((e.clientX - r.left) / r.width) * 100;
-      const y = ((e.clientY - r.top) / r.height) * 100;
-      el.style.setProperty("--spot-x", `${x}%`);
-      el.style.setProperty("--spot-y", `${y}%`);
-    },
-    [reducedMotion],
-  );
-
-  return (
-    <section
-      id="hero"
-      onMouseMove={onMove}
-      className="relative min-h-[92svh] overflow-hidden pt-16"
-      aria-label="Hero"
-    >
+  const onMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    if (reducedMotion) return;
+    const el = e.currentTarget;
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width * 100;
+    const y = (e.clientY - r.top) / r.height * 100;
+    el.style.setProperty("--spot-x", `${x}%`);
+    el.style.setProperty("--spot-y", `${y}%`);
+  }, [reducedMotion]);
+  return <section id="hero" onMouseMove={onMove} className="relative min-h-[92svh] overflow-hidden pt-16" aria-label="Hero">
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Mão com caneta digital criando uma identidade visual"
-          className="h-full w-full object-cover"
-          loading="eager"
-        />
+        <img src={heroImage} alt="Mão com caneta digital criando uma identidade visual" className="h-full w-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-hero" />
         <div className="absolute inset-0 bg-noise opacity-[0.07] mix-blend-overlay" />
       </div>
@@ -55,7 +38,7 @@ export function InboxHero() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row animate-fade-up">
             <Button asChild variant="hero" size="pill">
-              <a href="#contato">Iniciar Projeto</a>
+              
             </Button>
             <Button asChild variant="heroOutline" size="pill">
               <a href="#servicos">Conhecer Serviços</a>
@@ -72,6 +55,5 @@ export function InboxHero() {
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>;
 }
