@@ -34,7 +34,7 @@ export function InboxProcess() {
         </Card>)}
 
       <Card className="md:col-span-3 border-border/70 bg-card/60 p-6 shadow-soft backdrop-blur">
-        <p className="text-sm text-muted-foreground">Importante: o prazo de 20 dias úteis é contado a partir do briefing e confirmação do pagamento. A partir da terceira rodada de alterações, será cobrado um valor adicional de R$ 50,00 por solicitação.<span className="text-foreground">Importante:</span> o prazo de 20 dias úteis é contado a partir do briefing e
+        <p className="text-sm text-muted-foreground">Importante: o prazo de 20 dias úteis é contado a partir do briefing e confirmação do pagamento. A partir da terceira rodada de alterações, será cobrado um valor adicional de R$ 50,00 por solicitação.Importante: o prazo de 20 dias úteis é contado a partir do briefing e confirmação do pagamento. A partir da terceira rodada de alterações, será cobrado um valor adicional de R$ 50,00 por solicitação.<span className="text-foreground">Importante:</span> o prazo de 20 dias úteis é contado a partir do briefing e
           confirmação do pagamento. A partir da terceira rodada de alterações, será cobrado um valor adicional de R$ 150,00
           por solicitação.
         </p>
