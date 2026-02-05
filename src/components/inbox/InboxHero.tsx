@@ -37,9 +37,6 @@ export function InboxHero() {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row animate-fade-up">
-            <Button asChild variant="hero" size="pill">
-              
-            </Button>
             <Button asChild variant="heroOutline" size="pill">
               <a href="#servicos">Conhecer Serviços</a>
             </Button>
