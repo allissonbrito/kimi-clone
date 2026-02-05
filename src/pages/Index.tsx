@@ -1,4 +1,3 @@
-import { InboxTopNav } from "@/components/inbox/InboxTopNav";
 import { InboxHero } from "@/components/inbox/InboxHero";
 import { InboxSection } from "@/components/inbox/InboxSection";
 import { InboxDeliverables } from "@/components/inbox/InboxDeliverables";
@@ -11,7 +10,6 @@ import { InboxContact } from "@/components/inbox/InboxContact";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <InboxTopNav />
       <main>
         <InboxHero />
 
