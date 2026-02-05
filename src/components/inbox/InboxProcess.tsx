@@ -42,7 +42,7 @@ export function InboxProcess() {
         </Card>
       ))}
 
-      <Card className="md:col-span-3 border-border/70 bg-card/60 p-6 shadow-soft backdrop-blur"></Card>
+      
     </div>
   );
 }
