@@ -6,20 +6,12 @@ import { InboxPhotography } from "@/components/inbox/InboxPhotography";
 import { InboxProcess } from "@/components/inbox/InboxProcess";
 import { InboxAbout } from "@/components/inbox/InboxAbout";
 import { InboxContact } from "@/components/inbox/InboxContact";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <main>
         <InboxHero />
 
-        <InboxSection
-          id="servicos"
-          eyebrow="Apresentação"
-          title="Olá!"
-          subtitle="É um prazer receber você aqui."
-          className="bg-background"
-        >
+        <InboxSection id="servicos" eyebrow="Apresentação" title="Olá!" subtitle="É um prazer receber você aqui." className="bg-background">
           <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
             <div className="rounded-xl border border-border/70 bg-card/60 p-6 shadow-soft backdrop-blur">
               <p className="text-muted-foreground">
@@ -50,12 +42,7 @@ const Index = () => {
           </div>
         </InboxSection>
 
-        <InboxSection
-          id="investimento"
-          eyebrow="Social Media"
-          title="Investimento"
-          subtitle="Escolha a opção ideal para o momento da sua marca"
-        >
+        <InboxSection id="investimento" eyebrow="Social Media" title="Investimento" subtitle="Escolha a opção ideal para o momento da sua marca">
           <InboxPricing />
 
           <div className="mt-16">
@@ -63,12 +50,7 @@ const Index = () => {
           </div>
         </InboxSection>
 
-        <InboxSection
-          id="processo"
-          eyebrow="Prazos"
-          title="Nosso Processo"
-          subtitle="Planejado para garantir qualidade e exclusividade em cada detalhe"
-        >
+        <InboxSection id="processo" eyebrow="Prazos" title="Nosso Processo" subtitle="Planejado para garantir qualidade e exclusividade em cada detalhe">
           <InboxProcess />
         </InboxSection>
 
@@ -76,25 +58,17 @@ const Index = () => {
           <InboxAbout />
         </InboxSection>
 
-        <InboxSection
-          id="contato"
-          eyebrow="Contato"
-          title="Vamos criar algo incrível juntos?"
-          subtitle="Estamos prontos para ouvir sobre seu projeto e transformar sua visão em realidade"
-        >
+        <InboxSection id="contato" eyebrow="Contato" title="Vamos criar algo incrível juntos?" subtitle="Estamos prontos para ouvir sobre seu projeto e transformar sua visão em realidade">
           <InboxContact />
         </InboxSection>
       </main>
 
       <footer className="border-t border-border/70 py-10">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="font-display">INBOX</p>
+          
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} • Proposta | 2026</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
-
