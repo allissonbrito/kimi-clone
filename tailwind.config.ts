@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["ui-serif", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "Apple Color Emoji", "Segoe UI Emoji"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -58,6 +62,15 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        "hero": "var(--gradient-hero)",
+        "gold": "var(--gradient-gold)",
+        "noise": "var(--noise)",
+      },
+      boxShadow: {
+        elev: "var(--shadow-elev)",
+        soft: "var(--shadow-soft)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -80,10 +93,20 @@ export default {
             height: "0",
           },
         },
+        "fade-up": {
+          from: { opacity: "0", transform: "translate3d(0, 16px, 0)" },
+          to: { opacity: "1", transform: "translate3d(0, 0, 0)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translate3d(0, 0, 0)" },
+          "50%": { transform: "translate3d(0, -10px, 0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 650ms cubic-bezier(.2,.8,.2,1) both",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },
