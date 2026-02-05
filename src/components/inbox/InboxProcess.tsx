@@ -18,7 +18,7 @@ const steps: Step[] = [{
 }, {
   number: "03",
   title: "Alterações",
-  description: "Cada solicitação de ajuste tem prazo de retorno. A partir da terceira rodada, poderá ser cobrado valor adicional de R$ 150,00 por solicitação.",
+  description: "Cada solicitação de ajuste tem prazo de retorno. A partir da terceira rodada, poderá ser cobrado valor adicional de R$ 50,00 por solicitação.",
   timing: "Prazo: Até 5 dias úteis"
 }];
 export function InboxProcess() {
@@ -34,7 +34,12 @@ export function InboxProcess() {
         </Card>)}
 
       <Card className="md:col-span-3 border-border/70 bg-card/60 p-6 shadow-soft backdrop-blur">
-        
+        <div className="grid gap-2 md:grid-cols-[auto,1fr] md:items-start">
+          <span className="text-xs font-medium uppercase tracking-[0.28em] text-foreground/60">Observação</span>
+          <p className="text-sm text-muted-foreground">
+            Essa regra não se aplica a todos os projetos — antes, firmamos um acordo com o cliente conforme a necessidade e o escopo.
+          </p>
+        </div>
       </Card>
     </div>;
 }
